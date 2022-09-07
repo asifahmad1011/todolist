@@ -84,7 +84,7 @@ export default {
     let todos = ref([])
 
     let data = reactive({
-      newTodoName: { name: "", descrption: "" },
+      newTodoName: { name: "", descrption: "", unChecked: true },
       todos: [{
         id: 1662483341456,
         name: "User Story1", descrption: "The user should able to create tasks .After creation the user should be able to see all created tasks .The user can check a task and see an indicator of how many tasks are still unchecked.",
@@ -124,7 +124,7 @@ export default {
           id: Date.now(),
           name: data.newTodoName.name,
           descrption: data.newTodoName.descrption,
-          inProgress: true
+          unChecked: true
         }
         data.todos.push(newTodo)
         data.newTodoName.name = ""
